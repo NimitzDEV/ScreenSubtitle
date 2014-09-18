@@ -61,16 +61,17 @@ Partial Class frmMain
         Me.btnUpdateSingle = New System.Windows.Forms.Button()
         Me.txtSubtitle = New System.Windows.Forms.TextBox()
         Me.rbSingle = New System.Windows.Forms.RadioButton()
-        Me.fdStyle = New System.Windows.Forms.FontDialog()
-        Me.cdStyle = New System.Windows.Forms.ColorDialog()
-        Me.ofd = New System.Windows.Forms.OpenFileDialog()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LinkLabel8 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.fdStyle = New System.Windows.Forms.FontDialog()
+        Me.cdStyle = New System.Windows.Forms.ColorDialog()
+        Me.ofd = New System.Windows.Forms.OpenFileDialog()
+        Me.llbDetail = New System.Windows.Forms.LinkLabel()
         Me.GroupBox1.SuspendLayout()
         CType(Me.tbHeight, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbLocation, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -194,6 +195,7 @@ Partial Class frmMain
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.llbDetail)
         Me.GroupBox2.Controls.Add(Me.cbXML)
         Me.GroupBox2.Controls.Add(Me.cbBackTrans)
         Me.GroupBox2.Controls.Add(Me.btnChangeKC)
@@ -217,7 +219,7 @@ Partial Class frmMain
         'cbXML
         '
         Me.cbXML.AutoSize = True
-        Me.cbXML.Location = New System.Drawing.Point(87, 109)
+        Me.cbXML.Location = New System.Drawing.Point(6, 109)
         Me.cbXML.Name = "cbXML"
         Me.cbXML.Size = New System.Drawing.Size(114, 16)
         Me.cbXML.TabIndex = 15
@@ -260,18 +262,18 @@ Partial Class frmMain
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(236, 80)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(89, 12)
+        Me.Label4.Size = New System.Drawing.Size(77, 12)
         Me.Label4.TabIndex = 11
-        Me.Label4.Text = "当前 Key Color"
+        Me.Label4.Text = "当前通道颜色"
         '
         'cbTK
         '
         Me.cbTK.AutoSize = True
         Me.cbTK.Location = New System.Drawing.Point(219, 51)
         Me.cbTK.Name = "cbTK"
-        Me.cbTK.Size = New System.Drawing.Size(144, 16)
+        Me.cbTK.Size = New System.Drawing.Size(102, 16)
         Me.cbTK.TabIndex = 10
-        Me.cbTK.Text = "启用 Transparent Key"
+        Me.cbTK.Text = "启用 颜色透明"
         Me.cbTK.UseVisualStyleBackColor = True
         '
         'pbBackPreview
@@ -333,7 +335,7 @@ Partial Class frmMain
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(263, 17)
+        Me.Label3.Location = New System.Drawing.Point(245, 27)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(191, 12)
         Me.Label3.TabIndex = 0
@@ -497,6 +499,27 @@ Partial Class frmMain
         Me.TabPage3.Text = "关于"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label7.Location = New System.Drawing.Point(17, 205)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(239, 24)
+        Me.Label7.TabIndex = 25
+        Me.Label7.Text = "如果你喜欢本软件" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "欢迎通过手机支付宝扫描二维码给我捐助哦~"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.分屏字幕.My.Resources.Resources.alipayqrcode
+        Me.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox1.Location = New System.Drawing.Point(263, 111)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 24
+        Me.PictureBox1.TabStop = False
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -543,26 +566,15 @@ Partial Class frmMain
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "新浪微博"
         '
-        'PictureBox1
+        'llbDetail
         '
-        Me.PictureBox1.Image = Global.分屏字幕.My.Resources.Resources.alipayqrcode
-        Me.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox1.Location = New System.Drawing.Point(263, 111)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(200, 200)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 24
-        Me.PictureBox1.TabStop = False
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label7.Location = New System.Drawing.Point(17, 205)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(239, 24)
-        Me.Label7.TabIndex = 25
-        Me.Label7.Text = "如果你喜欢本软件" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "欢迎通过手机支付宝扫描二维码给我捐助哦~"
+        Me.llbDetail.AutoSize = True
+        Me.llbDetail.Location = New System.Drawing.Point(117, 110)
+        Me.llbDetail.Name = "llbDetail"
+        Me.llbDetail.Size = New System.Drawing.Size(29, 12)
+        Me.llbDetail.TabIndex = 16
+        Me.llbDetail.TabStop = True
+        Me.llbDetail.Text = "详细"
         '
         'frmMain
         '
@@ -649,5 +661,6 @@ Partial Class frmMain
     Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents llbDetail As System.Windows.Forms.LinkLabel
 
 End Class

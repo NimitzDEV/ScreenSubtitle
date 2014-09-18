@@ -1,6 +1,7 @@
 ﻿Imports System.Text.RegularExpressions.Regex
 Public Class frmMain
     Public now As Integer = -1
+    Dim fontStyle As FontStyle
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Screen.AllScreens.Count < 2 Then
             If MsgBox("需要两个显示设备才能使用本程序，继续使用点击是", vbInformation + vbOKCancel, "TIPS") = MsgBoxResult.Cancel Then
@@ -35,12 +36,15 @@ Public Class frmMain
     Private Sub btnFont_Click(sender As Object, e As EventArgs) Handles btnFont.Click
         fdStyle.ShowDialog()
         lbFontName.Text = (fdStyle.Font.Name)
+        If fdStyle.Font.Bold Then fontStyle += Drawing.FontStyle.Bold
+        If fdStyle.Font.Italic Then fontStyle += Drawing.FontStyle.Italic
+        If fdStyle.Font.Underline Then fontStyle += Drawing.FontStyle.Underline
         applyChange()
     End Sub
 
     Private Sub applyChange()
         With frmSubtitle
-            .Label1.Font = New Font(lbFontName.Text, .Label1.Font.Size)
+            .Label1.Font = New Font(lbFontName.Text, .Label1.Font.Size, fontStyle)
         End With
         fontName = lbFontName.Text
         adjust()
@@ -185,5 +189,9 @@ Public Class frmMain
 
     Private Sub LinkLabel8_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel8.LinkClicked
         Process.Start("http://www.zhihu.com/people/NimitzDEV")
+    End Sub
+
+    Private Sub llbDetail_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbDetail.LinkClicked
+        Process.Start("http://baike.baidu.com/view/73.htm?fr=aladdin#6")
     End Sub
 End Class

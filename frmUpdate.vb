@@ -7,12 +7,12 @@
     Public timeout As Integer = 20
     Private Sub frmUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         wbStart.Navigate("http://nimitzdev.free3v.net/update/update_fpzm.html")
-        Me.Height = 91
+        Me.Height = 94
     End Sub
     Private Sub wbStart_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles wbStart.DocumentCompleted
         wbInfo.Navigate("http://nimitzdev.free3v.net/update/update_fpzm.html")
     End Sub
-    Private Sub spiltPageString()
+    Private Sub splitPageString()
         docString = New System.IO.StreamReader(wbInfo.DocumentStream, System.Text.Encoding.Default).ReadToEnd
         versionString = Split(docString, "≡")(1).Trim
         updateString = Split(docString, "≡")(2).Trim
@@ -26,7 +26,7 @@
             lbStatus.ForeColor = Color.DodgerBlue
         Else
             If listLoaded() = True Then btnDownload.Enabled = True
-            Me.Height = 254
+            Me.Height = 256
             txtDetails.Visible = True
             txtDetails.Text = updateString
             lbStatus.Text = "检测到新的版本可以下载！" & vbCrLf & "- 新的版本：" & versionString & vbCrLf & "- 当前版本：" & Application.ProductVersion
@@ -77,5 +77,9 @@
 
     Private Sub btnDownload_Click(sender As Object, e As EventArgs) Handles btnDownload.Click
         cmsDownloadList.Show(btnDownload, 0, btnDownload.Height)
+    End Sub
+
+    Private Sub wbInfo_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles wbInfo.DocumentCompleted
+        splitPageString()
     End Sub
 End Class

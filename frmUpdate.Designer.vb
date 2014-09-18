@@ -45,7 +45,7 @@ Partial Class frmUpdate
         '
         'txtDetails
         '
-        Me.txtDetails.Location = New System.Drawing.Point(12, 53)
+        Me.txtDetails.Location = New System.Drawing.Point(12, 56)
         Me.txtDetails.Multiline = True
         Me.txtDetails.Name = "txtDetails"
         Me.txtDetails.ReadOnly = True
@@ -106,7 +106,7 @@ Partial Class frmUpdate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(370, 215)
+        Me.ClientSize = New System.Drawing.Size(370, 217)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.btnDownload)
         Me.Controls.Add(Me.txtDetails)
@@ -115,7 +115,9 @@ Partial Class frmUpdate
         Me.Controls.Add(Me.wbInfo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmUpdate"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "检查新版本"
+        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

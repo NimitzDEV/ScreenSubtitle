@@ -194,4 +194,8 @@ Public Class frmMain
     Private Sub llbDetail_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbDetail.LinkClicked
         Process.Start("http://baike.baidu.com/view/73.htm?fr=aladdin#6")
     End Sub
+
+    Private Sub llbUpdate_Click(sender As Object, e As EventArgs) Handles llbUpdate.Click
+        frmUpdate.ShowDialog()
+    End Sub
 End Class

@@ -34,6 +34,7 @@ Partial Class frmMain
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.llbDetail = New System.Windows.Forms.LinkLabel()
         Me.cbXML = New System.Windows.Forms.CheckBox()
         Me.cbBackTrans = New System.Windows.Forms.CheckBox()
         Me.btnChangeKC = New System.Windows.Forms.Button()
@@ -62,6 +63,7 @@ Partial Class frmMain
         Me.txtSubtitle = New System.Windows.Forms.TextBox()
         Me.rbSingle = New System.Windows.Forms.RadioButton()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.llbUpdate = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -71,8 +73,6 @@ Partial Class frmMain
         Me.fdStyle = New System.Windows.Forms.FontDialog()
         Me.cdStyle = New System.Windows.Forms.ColorDialog()
         Me.ofd = New System.Windows.Forms.OpenFileDialog()
-        Me.llbDetail = New System.Windows.Forms.LinkLabel()
-        Me.llbUpdate = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.tbHeight, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbLocation, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -216,6 +216,16 @@ Partial Class frmMain
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "颜色与字体"
+        '
+        'llbDetail
+        '
+        Me.llbDetail.AutoSize = True
+        Me.llbDetail.Location = New System.Drawing.Point(117, 110)
+        Me.llbDetail.Name = "llbDetail"
+        Me.llbDetail.Size = New System.Drawing.Size(29, 12)
+        Me.llbDetail.TabIndex = 16
+        Me.llbDetail.TabStop = True
+        Me.llbDetail.Text = "详细"
         '
         'cbXML
         '
@@ -501,6 +511,15 @@ Partial Class frmMain
         Me.TabPage3.Text = "关于"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'llbUpdate
+        '
+        Me.llbUpdate.Location = New System.Drawing.Point(79, 127)
+        Me.llbUpdate.Name = "llbUpdate"
+        Me.llbUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.llbUpdate.TabIndex = 26
+        Me.llbUpdate.Text = "检查新版本"
+        Me.llbUpdate.UseVisualStyleBackColor = True
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -567,25 +586,6 @@ Partial Class frmMain
         Me.LinkLabel2.TabIndex = 19
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "新浪微博"
-        '
-        'llbDetail
-        '
-        Me.llbDetail.AutoSize = True
-        Me.llbDetail.Location = New System.Drawing.Point(117, 110)
-        Me.llbDetail.Name = "llbDetail"
-        Me.llbDetail.Size = New System.Drawing.Size(29, 12)
-        Me.llbDetail.TabIndex = 16
-        Me.llbDetail.TabStop = True
-        Me.llbDetail.Text = "详细"
-        '
-        'llbUpdate
-        '
-        Me.llbUpdate.Location = New System.Drawing.Point(79, 127)
-        Me.llbUpdate.Name = "llbUpdate"
-        Me.llbUpdate.Size = New System.Drawing.Size(75, 23)
-        Me.llbUpdate.TabIndex = 26
-        Me.llbUpdate.Text = "检查新版本"
-        Me.llbUpdate.UseVisualStyleBackColor = True
         '
         'frmMain
         '

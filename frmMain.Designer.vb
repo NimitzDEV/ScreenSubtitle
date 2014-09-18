@@ -72,6 +72,7 @@ Partial Class frmMain
         Me.cdStyle = New System.Windows.Forms.ColorDialog()
         Me.ofd = New System.Windows.Forms.OpenFileDialog()
         Me.llbDetail = New System.Windows.Forms.LinkLabel()
+        Me.llbUpdate = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.tbHeight, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbLocation, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -410,7 +411,7 @@ Partial Class frmMain
         '
         'btnPrevious
         '
-        Me.btnPrevious.Location = New System.Drawing.Point(273, 171)
+        Me.btnPrevious.Location = New System.Drawing.Point(273, 165)
         Me.btnPrevious.Name = "btnPrevious"
         Me.btnPrevious.Size = New System.Drawing.Size(75, 23)
         Me.btnPrevious.TabIndex = 3
@@ -419,7 +420,7 @@ Partial Class frmMain
         '
         'btnNext
         '
-        Me.btnNext.Location = New System.Drawing.Point(354, 171)
+        Me.btnNext.Location = New System.Drawing.Point(354, 165)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(75, 23)
         Me.btnNext.TabIndex = 2
@@ -430,7 +431,7 @@ Partial Class frmMain
         '
         Me.btnAddFile.Location = New System.Drawing.Point(6, 165)
         Me.btnAddFile.Name = "btnAddFile"
-        Me.btnAddFile.Size = New System.Drawing.Size(92, 23)
+        Me.btnAddFile.Size = New System.Drawing.Size(100, 23)
         Me.btnAddFile.TabIndex = 1
         Me.btnAddFile.Text = "添加txt文件"
         Me.btnAddFile.UseVisualStyleBackColor = True
@@ -441,7 +442,7 @@ Partial Class frmMain
         Me.ListBox1.ItemHeight = 12
         Me.ListBox1.Location = New System.Drawing.Point(193, 11)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(236, 160)
+        Me.ListBox1.Size = New System.Drawing.Size(236, 148)
         Me.ListBox1.TabIndex = 0
         '
         'GroupBox3
@@ -485,6 +486,7 @@ Partial Class frmMain
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.llbUpdate)
         Me.TabPage3.Controls.Add(Me.Label7)
         Me.TabPage3.Controls.Add(Me.PictureBox1)
         Me.TabPage3.Controls.Add(Me.Label5)
@@ -576,6 +578,15 @@ Partial Class frmMain
         Me.llbDetail.TabStop = True
         Me.llbDetail.Text = "详细"
         '
+        'llbUpdate
+        '
+        Me.llbUpdate.Location = New System.Drawing.Point(79, 127)
+        Me.llbUpdate.Name = "llbUpdate"
+        Me.llbUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.llbUpdate.TabIndex = 26
+        Me.llbUpdate.Text = "检查新版本"
+        Me.llbUpdate.UseVisualStyleBackColor = True
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -662,5 +673,6 @@ Partial Class frmMain
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents llbDetail As System.Windows.Forms.LinkLabel
+    Friend WithEvents llbUpdate As System.Windows.Forms.Button
 
 End Class

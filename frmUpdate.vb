@@ -25,10 +25,16 @@
             lbStatus.Text = "当前已经是最新版本 （" & Application.ProductVersion & "）"
             lbStatus.ForeColor = Color.DodgerBlue
         Else
-            If listLoaded() = True Then btnDownload.Enabled = True
+            If listLoaded() = True Then
+                btnDownload.Enabled = True
+            Else
+                btnDownload.Text = "暂无下载"
+            End If
+
             Me.Height = 256
             txtDetails.Visible = True
             txtDetails.Text = updateString
+            ProgressBar1.Visible = False
             lbStatus.Text = "检测到新的版本可以下载！" & vbCrLf & "- 新的版本：" & versionString & vbCrLf & "- 当前版本：" & Application.ProductVersion
             lbStatus.ForeColor = Color.Green
         End If

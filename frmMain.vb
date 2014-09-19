@@ -1,7 +1,7 @@
 ﻿Imports System.Text.RegularExpressions.Regex
 Public Class frmMain
     Public now As Integer = -1
-    Dim fontStyle As FontStyle
+    Public fontStyle As FontStyle
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Screen.AllScreens.Count < 2 Then
             If MsgBox("需要两个显示设备才能使用本程序，继续使用点击是", vbInformation + vbOKCancel, "TIPS") = MsgBoxResult.Cancel Then
@@ -36,6 +36,7 @@ Public Class frmMain
     Private Sub btnFont_Click(sender As Object, e As EventArgs) Handles btnFont.Click
         fdStyle.ShowDialog()
         lbFontName.Text = (fdStyle.Font.Name)
+        fontStyle = Drawing.FontStyle.Regular
         If fdStyle.Font.Bold Then fontStyle += Drawing.FontStyle.Bold
         If fdStyle.Font.Italic Then fontStyle += Drawing.FontStyle.Italic
         If fdStyle.Font.Underline Then fontStyle += Drawing.FontStyle.Underline
@@ -44,7 +45,7 @@ Public Class frmMain
 
     Private Sub applyChange()
         With frmSubtitle
-            .Label1.Font = New Font(lbFontName.Text, .Label1.Font.Size, fontStyle)
+            .Label1.Font = New Font(lbFontName.Text, .Label1.Font.Size, Drawing.FontStyle.Bold)
         End With
         fontName = lbFontName.Text
         adjust()
@@ -197,5 +198,6 @@ Public Class frmMain
 
     Private Sub llbUpdate_Click(sender As Object, e As EventArgs) Handles llbUpdate.Click
         frmUpdate.ShowDialog()
+        frmUpdate.Dispose()
     End Sub
 End Class

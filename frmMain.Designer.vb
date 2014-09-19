@@ -137,9 +137,9 @@ Partial Class frmMain
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(17, 68)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(113, 12)
+        Me.Label2.Size = New System.Drawing.Size(89, 12)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "字幕最大横向屏占比"
+        Me.Label2.Text = "字幕纵向屏占比"
         '
         'Label1
         '
@@ -154,10 +154,10 @@ Partial Class frmMain
         '
         Me.tbHeight.BackColor = System.Drawing.Color.White
         Me.tbHeight.LargeChange = 2
-        Me.tbHeight.Location = New System.Drawing.Point(136, 61)
+        Me.tbHeight.Location = New System.Drawing.Point(112, 61)
         Me.tbHeight.Maximum = 50
         Me.tbHeight.Name = "tbHeight"
-        Me.tbHeight.Size = New System.Drawing.Size(318, 45)
+        Me.tbHeight.Size = New System.Drawing.Size(342, 45)
         Me.tbHeight.TabIndex = 1
         Me.tbHeight.Value = 2
         '

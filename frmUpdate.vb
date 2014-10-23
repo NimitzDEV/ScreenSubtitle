@@ -6,11 +6,11 @@
     Dim spliter() As String = {"≠"}
     Public timeout As Integer = 20
     Private Sub frmUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        wbStart.Navigate("http://nimitzdev.free3v.net/update/update_fpzm.html")
+        wbStart.Navigate("http://ndev.cu.cc/update/update_fpzm.txt")
         Me.Height = 94
     End Sub
     Private Sub wbStart_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles wbStart.DocumentCompleted
-        wbInfo.Navigate("http://nimitzdev.free3v.net/update/update_fpzm.html")
+        splitPageString()
     End Sub
     Private Sub splitPageString()
         docString = New System.IO.StreamReader(wbInfo.DocumentStream, System.Text.Encoding.Default).ReadToEnd
@@ -86,6 +86,6 @@
     End Sub
 
     Private Sub wbInfo_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles wbInfo.DocumentCompleted
-        splitPageString()
+
     End Sub
 End Class

@@ -3,6 +3,7 @@ Public Class frmMain
     Public now As Integer = -1
     Public fontStyle As FontStyle
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Text = Application.ProductName & " - " & ProductVersion
         If Screen.AllScreens.Count < 2 Then
             If MsgBox("需要两个显示设备才能使用本程序，继续使用点击是", vbInformation + vbOKCancel, "TIPS") = MsgBoxResult.Cancel Then
                 Application.Exit()

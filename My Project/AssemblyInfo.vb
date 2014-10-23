@@ -10,10 +10,10 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("分屏字幕")> 
 <Assembly: AssemblyDescription("分屏字幕")> 
-<Assembly: AssemblyCompany("桂林理工大学博文管理学院学生会 - 信息部")> 
+<Assembly: AssemblyCompany("NimitzDEV")> 
 <Assembly: AssemblyProduct("分屏字幕")> 
 <Assembly: AssemblyCopyright("Copyright ©  2014")> 
-<Assembly: AssemblyTrademark("桂林理工大学博文管理学院学生会 - 信息部")> 
+<Assembly: AssemblyTrademark("NimitzDEV")> 
 
 <Assembly: ComVisible(False)>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' 方法是按如下所示使用“*”: 
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> 
+<Assembly: AssemblyVersion("1.0.0.1")> 
+<Assembly: AssemblyFileVersion("1.0.0.1")> 
